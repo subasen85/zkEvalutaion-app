@@ -2,11 +2,11 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   
-  <groupId>zkEvaluation-app-api</groupId>
-  <artifactId>zkEvaluation-app-api</artifactId>
+  <groupId>com.zkBackEnd</groupId>
+  <artifactId>zkEvaluation-BackEnd</artifactId>
   <packaging>war</packaging>
   <version>0.0.1</version>
-  <name>zkEvaluation-app-api Maven Webapp</name>
+  <name>zkEvaluation-BackEnd Api Maven Webapp</name>
   <url>http://maven.apache.org</url>
   
   <parent>
@@ -17,8 +17,6 @@
 	
   <properties>
 	<start-class>com.zk.Application</start-class>
-	<zk.version>8.0.0</zk.version>
-	<zk-spring.version>3.1.1</zk-spring.version>
   </properties>
 	
   <dependencies>
@@ -35,10 +33,10 @@
 	</dependency>
 
 	<!-- Spring security -->
-	<dependency>
+	<!-- <dependency>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-security</artifactId>
-	</dependency>
+	</dependency> -->
 
 	<dependency>
 		<groupId>org.springframework.boot</groupId>
@@ -89,36 +87,6 @@
 		<scope>test</scope>
 	</dependency>
 
-	<!-- integration with Swagger API doc generation http://goo.gl/J5FQDM
-	<dependency>
-		<groupId>com.mangofactory</groupId>
-		<artifactId>swagger-springmvc</artifactId>
-		<version>0.8.5</version>
-	</dependency>
-
-	<dependency>
-		<groupId>io.springfox</groupId>
-		<artifactId>springfox-swagger2</artifactId>
-		<version>2.4.0</version>
-	</dependency>
-	<dependency>
-		<groupId>io.springfox</groupId>
-		<artifactId>springfox-swagger-ui</artifactId>
-		<version>2.0.2</version>
-	</dependency>
-
-	<dependency>
-		<groupId>org.hsqldb</groupId>
-		<artifactId>hsqldb</artifactId>
-		<scope>runtime</scope>
-	</dependency> -->
-	
-	<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
-	<!-- <dependency>
-		<groupId>com.twilio.sdk</groupId>
-		<artifactId>twilio</artifactId>
-		<version>(7.0,7.9)</version>
-	</dependency> -->
 
 	<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
 	<dependency>
@@ -132,12 +100,6 @@
 		<artifactId>guava</artifactId>
 		<version>18.0</version>
 	</dependency>
-	
-	<!-- Elastic Search Dependency -->
-	<!-- <dependency>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-data-elasticsearch</artifactId>
-	</dependency> -->
 	
 	<!-- https://mvnrepository.com/artifact/com.sun.jna/jna -->
 	<dependency>
@@ -177,20 +139,7 @@
 		<version>4.1.0.Final</version>
 	</dependency>
 
-	<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-activemq
-	<dependency>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-activemq</artifactId>
-		<version>1.4.0.RELEASE</version>
-	</dependency>
-
-	https://mvnrepository.com/artifact/org.springframework.data/spring-data-mongodb
-	<dependency>
-		<groupId>org.springframework.data</groupId>
-		<artifactId>spring-data-mongodb</artifactId>
-	</dependency> -->
-
-	<!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-commons-core -->
+		<!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-commons-core -->
 	<dependency>
 		<groupId>org.springframework.data</groupId>
 		<artifactId>spring-data-commons-core</artifactId>
@@ -227,62 +176,7 @@
 	    <version>2.1</version>
 	</dependency>
 		
-	<!-- https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk
-	<dependency>
-   		<groupId>com.amazonaws</groupId>
-   		<artifactId>aws-java-sdk</artifactId>
-   		<version>1.11.75</version>
-	</dependency> -->
-		
-	<!-- ZK Evaluation Project dependency  -->
-	<dependency>
-	  	<groupId>org.zkoss.zk</groupId>
-	  	<artifactId>zkbind</artifactId>
-	   <version>${zk.version}</version>
-	</dependency>
-  
-    <dependency>
-		<groupId>org.zkoss.zk</groupId>
-		<artifactId>zul</artifactId>
-		<version>${zk.version}</version>
-		<exclusions>
-			<exclusion>
-				<artifactId>slf4j-jdk14</artifactId>
-				<groupId>org.slf4j</groupId>
-			</exclusion>
-		</exclusions>
-	</dependency>
-  
-  	<dependency>
-		<groupId>org.zkoss.zk</groupId>
-		<artifactId>zkplus</artifactId>
-		<version>${zk.version}</version>
-	</dependency>
 
-	<dependency>
-		<groupId>org.zkoss.zk</groupId>
-		<artifactId>zhtml</artifactId>
-		<version>${zk.version}</version>
-	</dependency>
-
-	<!-- dependency needed
-	<dependency>
-         <groupId>org.zkoss.zk</groupId>
-         <artifactId>zkspring-core</artifactId>
-         <version>${zk-spring.version}</version>
-     </dependency> -->
-        
-	<!-- <dependency>
-		<groupId>org.zkoss.zk</groupId>
-		<artifactId>zkspring-core</artifactId>
-		<version>${zk-spring.version}</version>
-		<exclusions>
-			<exclusion>
-				<artifactId>servlet-api</artifactId>
-				<groupId>javax.servlet</groupId>
-			</exclusion>
-		</exclusions>
-	</dependency>   -->
   </dependencies>
   
   
@@ -339,7 +233,6 @@
 			</plugin>
 		</plugins>
 		
-    <!-- <finalName>zkEvaluation-app-api</finalName> -->
   </build>
   
 </project>
