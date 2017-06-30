@@ -23,7 +23,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @ComponentScan(basePackages = "com.zk")
 @EnableJpaRepositories("com.zk.repository")
 //@Import(applicationconfigruation)
-@PropertySource({"classpath:application.properties"})
+@PropertySource({"classpath:application.properties", "classpath:message.properties"})
 public class Application extends SpringBootServletInitializer{
 
 	public static final Class<Application> applicationClass = Application.class;
