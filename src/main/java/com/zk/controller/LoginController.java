@@ -1,5 +1,7 @@
 package com.zk.controller;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,8 +16,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.google.gson.Gson;
+import com.zk.dto.EmployeeDTO;
 import com.zk.dto.LoginDTO;
 import com.zk.dto.StatusResponseDTO;
+import com.zk.service.EmployeeService;
 import com.zk.service.LoginService;
 import com.zk.utils.LoginUtils;
 
@@ -32,6 +36,9 @@ public class LoginController {
 	
 	@Autowired
 	private LoginService LoginService;
+	
+	@Autowired
+	private EmployeeService employeeService;
 	
 	@Autowired
 	private LoginUtils loginUtils;
@@ -58,6 +65,8 @@ public class LoginController {
 			return new ResponseEntity<String>(new Gson().toJson(statusResponseDTO), HttpStatus.PARTIAL_CONTENT);
 		}
 		
+		// Get employee list at login time
+		statusResponseDTO.setEmployee(employeeService.getAllEmployeeList());
 		statusResponseDTO.setMessage("Authentication Success");
 		return new ResponseEntity<String>(new Gson().toJson(statusResponseDTO), HttpStatus.OK);
 		
