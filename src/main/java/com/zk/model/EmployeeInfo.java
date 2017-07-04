@@ -61,7 +61,7 @@ public class EmployeeInfo implements Serializable {
 
 	@Column (name = "gender")
 	@NotNull
-	private Integer gender;
+	private String gender;
 
 	@Column (name = "emptype")
 	@NotNull
@@ -131,10 +131,10 @@ public class EmployeeInfo implements Serializable {
 		this.versionNo = versionNo;
 	}
 	
-	public Integer getGender() {
+	public String getGender() {
 		return gender;
 	}
-	public void setGender(Integer gender) {
+	public void setGender(String gender) {
 		this.gender = gender;
 	}
 	

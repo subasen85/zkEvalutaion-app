@@ -6,8 +6,8 @@ USE `employee_db`;
 DROP TABLE IF EXISTS `employee_details`;
 CREATE TABLE `employee_details` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `employee_name` varchar(150) NOT NULL,
-  `designation` varchar(100) NOT NULL,
+  `emp_name` varchar(150) NOT NULL,
+  `emp_designation` varchar(100) NOT NULL,
   `salary` double NOT NULL,
   `eamil_id` varchar(255) NOT NULL,
   `mobile_no` varchar(200) NOT NULL,
