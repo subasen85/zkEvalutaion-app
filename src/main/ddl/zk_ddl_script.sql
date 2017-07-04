@@ -14,7 +14,7 @@ CREATE TABLE `employee_details` (
   `status` varchar(45) NOT NULL,
   `created_date` date NOT NULL,
   `version` int(11) NOT NULL,
-  `gender` int(1) NOT NULL,
+  `gender` varchar(20) NOT NULL,
   `emptype` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
 ) 
